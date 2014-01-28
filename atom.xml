@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[FlyingBird]]></title>
+  <subtitle><![CDATA[Dream is what makes you happy, even when you are just trying.]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://xianlubird.github.io/"/>
+  <updated>2014-01-28T14:01:30.127Z</updated>
+  <id>http://xianlubird.github.io/</id>
+  
+  <author>
+    <name><![CDATA[Xianlu Bird]]></name>
+    <email><![CDATA[xianlubird@gmail.com]]></email>
+  </author>
+  
+  <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[第一篇]]></title>
+    <link href="http://xianlubird.github.io/2014/01/28/hello-world/"/>
+    <id>http://xianlubird.github.io/2014/01/28/hello-world/</id>
+    <published>2014-01-28T08:23:46.000Z</published>
+    <updated>2014-01-28T08:35:06.000Z</updated>
+    <content type="html"><![CDATA[<p>这里是测试中文问题的，呵呵</p>
+]]></content>
+    
+    
+      <category term="hehe" scheme="http://xianlubird.github.io/tags/hehe/"/>
+    
+  </entry>
+  
+</feed>

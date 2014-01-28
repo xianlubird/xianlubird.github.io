@@ -1,8 +1,0 @@
----
-layout: post
-title:  "第一篇博文"
-date:   2014-01-26 15:26:12
-categories: jekyll update
----
-
-这个事第一个博文，测试中文问题
