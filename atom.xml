@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Dream is what makes you happy, even when you are just trying.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://xianlubird.github.io/"/>
-  <updated>2014-02-03T07:06:23.575Z</updated>
+  <updated>2014-02-03T07:30:44.656Z</updated>
   <id>http://xianlubird.github.io/</id>
   
   <author>
@@ -13,6 +13,32 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[测试代码格式化问题]]></title>
+    <link href="http://xianlubird.github.io/2014/02/03/test_code/"/>
+    <id>http://xianlubird.github.io/2014/02/03/test_code/</id>
+    <published>2014-02-03T07:09:23.000Z</published>
+    <updated>2014-02-03T07:30:30.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="-more-">这个是测试所有格式的问题，包括代码贴图片视频等等的问题，还有代码摘要的问题等等<a id="more"></a></h1>
+<p> 下面是插入代码的呵呵<figure class="highlight return"><figcaption><span>heh iojdoawjuhuawhdh</span></figcaption><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre>  duawihdia
+  dawhdoa
+   diahwoidjoaiwjdioawdjo
+   dwaiohdoiawhodi
+</pre></td></tr></table></figure></p>
+<p><a href="http://www.baidu.com" title="这个事测试超链接" target="_blank"><a href="http://www.baidu.com">http://www.baidu.com</a></a></p>
+<p>这个事插入图片的问题。<img src="/img/123.jpg" alt="测试图片"></p>
+<p>差不多所有的格式都测试了一遍的</p>
+]]></content>
+    <summary type="html"><![CDATA[<h1 id="-more-">这个是测试所有格式的问题，包括代码贴图片视频等等的问题，还有代码摘要的问题等等]]></summary>
+    
+      <category term="杂感" scheme="http://xianlubird.github.io/tags/%E6%9D%82%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[第一篇]]></title>
