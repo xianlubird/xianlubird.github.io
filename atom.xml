@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Dream is what makes you happy, even when you are just trying.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://xianlubird.github.io/"/>
-  <updated>2014-02-03T08:20:05.710Z</updated>
+  <updated>2014-02-07T14:25:32.985Z</updated>
   <id>http://xianlubird.github.io/</id>
   
   <author>
@@ -15,42 +15,122 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[测试代码格式化问题]]></title>
-    <link href="http://xianlubird.github.io/2014/02/03/test_code/"/>
-    <id>http://xianlubird.github.io/2014/02/03/test_code/</id>
-    <published>2014-02-03T07:09:23.000Z</published>
-    <updated>2014-02-03T07:30:30.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="-more-">这个是测试所有格式的问题，包括代码贴图片视频等等的问题，还有代码摘要的问题等等<a id="more"></a></h1>
-<p> 下面是插入代码的呵呵<figure class="highlight return"><figcaption><span>heh iojdoawjuhuawhdh</span></figcaption><table><tr><td class="gutter"><pre>1
+    <title><![CDATA[剑指Offer第一篇(二维数组查找)]]></title>
+    <link href="http://xianlubird.github.io/2014/02/07/offer-first/"/>
+    <id>http://xianlubird.github.io/2014/02/07/offer-first/</id>
+    <published>2014-02-07T13:15:29.000Z</published>
+    <updated>2014-02-07T14:24:14.000Z</updated>
+    <content type="html"><![CDATA[<p>&emsp;&emsp;这算是我第一篇正儿八经写的博客。这个新的博客平台搭建起来之后一没怎么用过，因为确实没什么可以值得写的东西。但是最近开始找工作了，简历投递完了就得干活了，看看《剑指Offer》这本书，感觉真心不错，非常喜欢。于是就准备按照老规矩，开始写博客，记录上面的每一个我做过的编程题，算是新的生活又开始了吧，呵呵，Let&#39;s begin a new life!!!
+<a id="more"></a>
+&emsp;&emsp;这个题目的要求在这里。</p>
+<blockquote>
+<p>在一个二维数组里，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下的递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有这个数。类似这个</p>
+</blockquote>
+<pre><code>1 2 8 9
+2 4 9 12
+4 7 10 13
+6 8 11 15
+</code></pre><p>&emsp;&emsp;结题思路如下:
+<img src="img/offer-first-2.jpg" alt="">
+<img src="img/offer-first-1.jpg" alt="">
+<img src="img/offer-first-3.jpg" alt=""></p>
+<p>&emsp;&emsp;实现代码如下，使用Java完成</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
 4
-</pre></td><td class="code"><pre>  duawihdia
-  dawhdoa
-   diahwoidjoaiwjdioawdjo
-   dwaiohdoiawhodi
-</pre></td></tr></table></figure></p>
-<p><a href="http://www.baidu.com" title="这个事测试超链接" target="_blank"><a href="http://www.baidu.com">http://www.baidu.com</a></a></p>
-<p>这个事插入图片的问题。<img src="/img/123.jpg" alt="测试图片"></p>
-<p>差不多所有的格式都测试了一遍的</p>
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+</pre></td><td class="code"><pre><span class="keyword">package</span> com.bird.first;
+
+<span class="javadoc">/**
+ * 在一个二维数组里，每一行都按照从左到右递增的顺序排序，
+ * 每一列都按照从上到下的递增的顺序排序。
+ * 请完成一个函数，输入这样的一个二维数组和一个整数，
+ * 判断数组中是否含有这个数
+ * 1 2 8 9
+	2 4 9 12
+	4 7 10 13
+	6 8 11 15
+ *<span class="javadoctag"> @author</span> Bird
+ *
+ */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OfferThree</span> {</span>
+	
+	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">find</span>(<span class="keyword">int</span> nums[][],  <span class="keyword">int</span> number){
+		<span class="keyword">if</span>(nums==<span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;
+		
+		<span class="keyword">int</span> rows = nums.length;<span class="comment">//二维数组的行</span>
+		<span class="keyword">int</span> columns = <span class="number">0</span>;<span class="comment">//二维数组的列</span>
+		<span class="keyword">if</span>(nums[<span class="number">0</span>]!=<span class="keyword">null</span>) columns = nums[<span class="number">0</span>].length;
+		
+		<span class="keyword">int</span> row = <span class="number">0</span>;
+		<span class="keyword">int</span> column = columns-<span class="number">1</span>;
+		<span class="keyword">while</span>(row &lt; rows &amp;&amp; column &lt; columns){
+			
+			<span class="keyword">if</span>(nums[row][column]==number){
+				<span class="keyword">return</span> <span class="keyword">true</span>;
+			}<span class="keyword">else</span> <span class="keyword">if</span>(number &lt; nums[row][column]){
+				column--;
+			}<span class="keyword">else</span> <span class="keyword">if</span>(number &gt; nums[row][column]){
+				row++;
+			}
+			
+		}
+		<span class="keyword">return</span> <span class="keyword">false</span>;
+	}
+	
+	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(String[] args) {
+		<span class="keyword">int</span> arrs[][] = {{<span class="number">1</span>,<span class="number">2</span>,<span class="number">8</span>,<span class="number">9</span>},{<span class="number">2</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">12</span>},{<span class="number">4</span>,<span class="number">7</span>,<span class="number">10</span>,<span class="number">13</span>},{<span class="number">6</span>,<span class="number">8</span>,<span class="number">11</span>,<span class="number">15</span>};
+		<span class="keyword">boolean</span> result = find(arrs,<span class="number">7</span>);
+		System.out.println(result);
+	}
+}
+</pre></td></tr></table></figure>
 ]]></content>
-    <summary type="html"><![CDATA[<h1 id="-more-">这个是测试所有格式的问题，包括代码贴图片视频等等的问题，还有代码摘要的问题等等]]></summary>
+    <summary type="html"><![CDATA[<p>&emsp;&emsp;这算是我第一篇正儿八经写的博客。这个新的博客平台搭建起来之后一没怎么用过，因为确实没什么可以值得写的东西。但是最近开始找工作了，简历投递完了就得干活了，看看《剑指Offer》这本书，感觉真心不错，非常喜欢。于是就准备按照老规矩，开始写博客，记录上面的每一个我做过的编程题，算是新的生活又开始了吧，呵呵，Let&#39;s begin a new life!!!
+]]></summary>
     
-      <category term="杂感" scheme="http://xianlubird.github.io/tags/%E6%9D%82%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[第一篇]]></title>
-    <link href="http://xianlubird.github.io/2014/01/28/hello-world/"/>
-    <id>http://xianlubird.github.io/2014/01/28/hello-world/</id>
-    <published>2014-01-28T08:23:46.000Z</published>
-    <updated>2014-01-28T08:35:06.000Z</updated>
-    <content type="html"><![CDATA[<p>这里是测试中文问题的，呵呵</p>
-]]></content>
-    
-    
-      <category term="hehe" scheme="http://xianlubird.github.io/tags/hehe/"/>
+      <category term="剑指Offer" scheme="http://xianlubird.github.io/tags/%E5%89%91%E6%8C%87Offer/"/>
     
   </entry>
   
